@@ -7,7 +7,9 @@
 .page {
   height: 100%;
   font-family: $fontFamily;
+  font-weight: 400;
   -webkit-text-size-adjust: 100%;
+  color: $fontColor;
   scroll-behavior: smooth;
 }
 
@@ -80,6 +82,12 @@ a {
   margin: 0 auto;
   padding: 0 $containerOffset;
   max-width: $containerWidth;
+}
+
+.container-big {
+  margin: 0 auto;
+  padding: 0 $containerOffset;
+  max-width: $siteWidthMax;
 }
 
 .centered {

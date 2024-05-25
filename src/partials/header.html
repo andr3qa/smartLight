@@ -1,3 +1,37 @@
 <header class="header">
-  <div class="container header__container"></div>
+  <div class="container header__container">
+    <div class="logo-wrap">
+      <picture class="logo header__logo">
+        <source class="logo__src" srcset="./img/logo.webp" type="image/webp" />
+        <img
+          class="logo__img"
+          loading="lazy"
+          src="./img/logo.png"
+          class="image"
+          width="77"
+          height="53"
+          alt="Лого"
+        />
+      </picture>
+      <p class="header__p">
+        Интернет магазин <br />
+        поппулярных товаров
+      </p>
+    </div>
+    <div class="header__info">
+      <button class="btn-reset btn header__btn">Обратный звонок</button>
+      <div class="schedule header__schedule">
+        <p class="schedule__num">8 (800) 000-00-00</p>
+        <p class="schedule__time">Ежедневно с 9:00 до 20:00</p>
+      </div>
+      <button
+        class="btn-reset burger header__burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
 </header>

@@ -1,0 +1,19 @@
+.btn {
+  border-radius: 100px;
+  width: 203px;
+  height: 47px;
+  box-shadow: 0 10px 50px 0 rgba(246, 170, 56, 0.6);
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  background: $secondColor;
+  transition: 0.3s;
+
+  &:hover {
+    background: #ffe53f;
+  }
+
+  &:active {
+    background: #fcc913;
+  }
+}

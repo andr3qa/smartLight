@@ -1,2 +1,76 @@
 .header {
+  border-bottom: 1px solid rgba(#7e868e, 0.2);
+  padding: 16px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__p {
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    @include media(900) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 520px;
+
+    @include media(900) {
+      justify-content: end;
+      max-width: 50px;
+    }
+  }
+
+  &__btn {
+    @include media(900) {
+      display: none;
+    }
+  }
+
+  &__schedule {
+    @include media(900) {
+      display: none;
+    }
+  }
+}
+
+.schedule {
+  &__num {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    text-align: right;
+    color: #232323;
+  }
+
+  &__time {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: right;
+    color: #232323;
+  }
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  @include burger;
+
+  height: 18px;
 }

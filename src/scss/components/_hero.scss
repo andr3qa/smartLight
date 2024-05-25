@@ -1,2 +1,382 @@
 .hero {
+  &__container-big {
+    position: relative;
+  }
+
+  &__pic {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    max-width: 60%;
+
+    @include media(500) {
+      right: -101px;
+      max-width: 80%;
+    }
+  }
+
+  &__title-wrap {
+    max-width: 53%;
+
+    @include media(1400) {
+      max-width: 39%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 26px;
+    font-family: $secondFamily;
+    font-weight: 900;
+    font-size: 48px;
+
+    @include media(900) {
+      font-size: 27px;
+    }
+  }
+
+  &__subtitle {
+    margin: 20px 0 0;
+    font-weight: 400;
+    font-size: 35px;
+
+    @include media(900) {
+      font-size: 16px;
+    }
+  }
+
+  &__subsubtitle {
+    margin: 20px 0 0;
+    font-weight: 600;
+    font-size: 24px;
+
+    @include media(900) {
+      font-size: 14px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 80px;
+    max-width: 850px;
+    gap: 20px;
+
+    @include media(900) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(700) {
+      margin-top: 40px;
+    }
+
+    @include media(500) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    border: 1px solid #e0e1e7;
+    border-radius: 20px;
+    padding: 10px;
+    width: 190px;
+    text-align: center;
+
+    &:nth-child(1n) {
+      @include media(900) {
+        justify-self: end;
+      }
+
+      @include media(500) {
+        justify-self: center;
+      }
+    }
+
+    &:nth-child(2n) {
+      @include media(900) {
+        justify-self: start;
+      }
+
+      @include media(500) {
+        justify-self: center;
+      }
+    }
+  }
+
+  &__item-icon {
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 61px;
+    height: 61px;
+    line-height: 77px;
+    background: $mainColor;
+  }
+
+  &__item-svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+  }
+
+  &__high-quality {
+    position: absolute;
+    right: 400px;
+    top: 0;
+
+    @include media(1400) {
+      right: 0;
+      top: -25px;
+    }
+
+    @include media(900) {
+      right: 220px;
+      top: 32px;
+      max-width: 21%;
+    }
+
+    @include media(500) {
+      display: none;
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    right: 550px;
+    top: 95px;
+
+    @include media(1400) {
+      right: 30px;
+      top: 48px;
+    }
+
+    @include media(900) {
+      inset: 515px 0 0;
+      margin: 0 auto;
+    }
+
+    @include media(700) {
+      top: 378px;
+    }
+  }
+
+  &__prices {
+    margin-top: 37px;
+
+    @include media(900) {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 350px;
+    }
+
+    @include media(700) {
+      margin-top: 180px;
+    }
+
+    @include media(500) {
+      margin-top: 125px;
+    }
+  }
+
+  &__quantity {
+    margin-top: 50px;
+
+    @include media(900) {
+      display: block;
+      margin: 170px auto 0;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    @include media(700) {
+      margin-top: 110px;
+    }
+  }
+}
+
+.sale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 30px;
+  width: 165px;
+  height: 165px;
+  text-align: center;
+  color: #fff;
+  background: #f00;
+
+  @include media(900) {
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+  }
+
+  @include media(500) {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__txt {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+
+    @include media(900) {
+      font-size: 18px;
+    }
+
+    @include media(500) {
+      font-size: 14px;
+    }
+  }
+
+  &__num {
+    margin: 5px 0 0;
+    font-weight: 600;
+    font-size: 47px;
+
+    @include media(900) {
+      font-size: 24px;
+    }
+
+    @include media(900) {
+      font-size: 18px;
+    }
+  }
+}
+
+.prices {
+  position: relative;
+  z-index: -1;
+  padding: 47px;
+  max-width: 100%;
+  background: #f3f3f6;
+
+  @include media(900) {
+    padding: 20px;
+  }
+
+  @include media(500) {
+    padding: 10px;
+  }
+
+  &__just {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: #4f5565;
+
+    @include media(900) {
+      display: flex;
+      flex-direction: column;
+      justify-self: end;
+      grid-column: 2 / 3;
+      margin: 0;
+    }
+
+    @include media(500) {
+      font-size: 11px;
+    }
+  }
+
+  &__crossed {
+    font-size: 29px;
+    text-decoration: line-through;
+
+    @include media(900) {
+      font-size: 26px;
+    }
+
+    @include media(500) {
+      font-size: 14px;
+    }
+  }
+
+  &__now {
+    margin-top: 40px;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    color: #000;
+
+    @include media(900) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 0;
+      font-size: 11px;
+    }
+  }
+
+  &__black {
+    font-weight: 600;
+    font-size: 53px;
+
+    @include media(900) {
+      font-size: 26px;
+    }
+
+    @include media(500) {
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50px;
+    bottom: -20px;
+
+    @include media(900) {
+      inset: 170px 0 0;
+      margin: 0 auto;
+    }
+
+    @include media(700) {
+      top: 120px;
+    }
+
+    @include media(500) {
+      top: 80px;
+    }
+  }
+}
+
+.quantity {
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: #4f5565;
+
+  @include media(500) {
+    font-size: 14px;
+  }
+
+  &__span {
+    display: inline-block;
+    margin-left: 15px;
+    border-radius: 100px;
+    padding: 10px 20px;
+    box-shadow: 0 20px 37px 0 rgba(44, 55, 91, 0.15);
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.24em;
+    color: #000;
+    background: #fff;
+
+    @include media(500) {
+      padding: 5px 10px;
+      font-size: 18px;
+    }
+  }
+
+  &__strong {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.24em;
+    color: #000;
+
+    @include media(500) {
+      font-size: 16px;
+    }
+  }
 }
