@@ -1,0 +1,159 @@
+@use "mixins"as *;
+
+.worksWeather {
+  padding-bottom: 80px;
+
+  &__container-big {
+    position: relative;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include media(900) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__section-title {
+    grid-column: 2 / 3;
+
+    @include media(900) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: -1;
+    max-width: 50%;
+
+    @include media(900) {
+      top: 12%;
+      max-width: 80%;
+    }
+  }
+
+  &__items-wrap {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    gap: 46px;
+
+    @include media(900) {
+      grid-column: 1 / 2;
+      padding-top: 117%;
+    }
+  }
+}
+
+.worksWeather-item {
+  text-align: center;
+
+  &__icon-wrap {
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 164px;
+    height: 164px;
+    box-shadow: 0 20px 37px 0 rgba(44, 55, 91, 0.15);
+    line-height: 230px;
+    text-align: center;
+    background-color: #fff;
+
+    @include media(900) {
+      width: 144px;
+      height: 144px;
+    }
+  }
+
+  &__svg {
+    width: 78px;
+    height: 78px;
+    fill: var(--iconColor);
+
+    @include media(900) {
+      width: 69px;
+      height: 69px;
+    }
+  }
+
+  &__title {
+    margin: 20px auto 0;
+    max-width: 194px;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+
+    @include media(900) {
+      font-size: 20px;
+    }
+  }
+}
+
+.section-title {
+  position: relative;
+
+  &__title {
+    margin: 0;
+    font-family: var(--secondFamily);
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    color: var(--fontColor);
+
+    @include media(900) {
+      font-size: 22px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin: 16px auto 0;
+    width: 13px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      top: 10px;
+      width: 67px;
+      height: 1px;
+      background-color: #4f5565;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 10px;
+      width: 67px;
+      height: 1px;
+      background-color: #4f5565;
+    }
+  }
+
+  &__svg {
+    width: 13px;
+    height: 21px;
+    fill: #4f5565;
+  }
+
+  &__subtitle {
+    margin: 12px auto 0;
+    max-width: 710px;
+    font-family: var(--fontFamily);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 122%;
+    text-align: center;
+    color: #1c1a1a;
+
+    @include media(900) {
+      font-size: 18px;
+    }
+  }
+}

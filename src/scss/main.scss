@@ -1,8 +1,9 @@
-@import "vars";
-@import "mixins";
-@import "fonts";
-@import "settings";
-@import "./components/btn";
-@import "./components/header";
-@import "./components/hero";
-@import "./components/footer";
+@use "vars";
+@use "mixins";
+@use "fonts";
+@use "settings";
+@use "./components/btn";
+@use "./components/header";
+@use "./components/hero";
+@use "./components/worksWeather";
+@use "./components/footer";

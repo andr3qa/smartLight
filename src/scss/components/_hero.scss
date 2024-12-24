@@ -1,4 +1,12 @@
+@use "mixins"as *;
+
 .hero {
+  padding-bottom: 130px;
+
+  @include media(900) {
+    padding-bottom: 80px;
+  }
+
   &__container-big {
     position: relative;
   }
@@ -27,7 +35,7 @@
   &__title {
     margin: 0;
     padding-top: 26px;
-    font-family: $secondFamily;
+    font-family: var(--secondFamily);
     font-weight: 900;
     font-size: 48px;
 
@@ -110,7 +118,7 @@
     width: 61px;
     height: 61px;
     line-height: 77px;
-    background: $mainColor;
+    background: var(--mainColor);
   }
 
   &__item-svg {
@@ -165,9 +173,13 @@
 
     @include media(900) {
       display: grid;
-      align-items: center;
       grid-template-columns: 1fr 1fr;
       margin-top: 350px;
+
+      &>.prices__just,
+      .prices__now {
+        align-self: center
+      }
     }
 
     @include media(700) {
