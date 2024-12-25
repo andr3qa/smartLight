@@ -97,6 +97,30 @@
 .section-title {
   position: relative;
 
+  &_white {
+    .section-title__title {
+      color: #fff;
+    }
+
+    .section-title__subtitle {
+      color: #fff;
+    }
+
+    .section-title__svg {
+      fill: #fff;
+    }
+
+    .section-title__icon {
+      &::before {
+        background-color: #fff;
+      }
+
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+
   &__title {
     margin: 0;
     font-family: var(--secondFamily);
