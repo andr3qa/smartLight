@@ -13,14 +13,29 @@
 
   &__pic {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -417px;
+    top: -290px;
     z-index: -1;
-    max-width: 60%;
+    max-width: 90%;
+
+    @include media(1200) {
+      right: -350px;
+      top: -210px;
+    }
+
+    @include media(900) {
+      right: -210px;
+      top: -160px;
+    }
+
+    @include media(700) {
+      right: -166px;
+      top: -127px;
+    }
 
     @include media(500) {
-      right: -101px;
-      max-width: 80%;
+      top: -100px;
+      max-width: 100%;
     }
   }
 
@@ -138,9 +153,11 @@
     }
 
     @include media(900) {
-      right: 220px;
-      top: 32px;
-      max-width: 21%;
+      display: none;
+
+      // right: 220px;
+      // top: 32px;
+      // max-width: 21%;
     }
 
     @include media(500) {

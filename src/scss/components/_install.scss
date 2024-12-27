@@ -1,0 +1,144 @@
+@use "mixins"as *;
+
+.install {
+  position: relative;
+  padding-bottom: 80px;
+
+  &__blots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin: 0 auto;
+    width: 1800px;
+    height: 661px;
+    background: center / cover no-repeat;
+
+    &_ye {
+      top: 0;
+      background-image: url("./../img/install__blots_ye.webp");
+    }
+
+    &_bl {
+      bottom: 0;
+      background-image: url("./../img/install__blots_bl.webp");
+    }
+  }
+
+  &__section-title {
+    &:nth-child(3) {
+      margin-top: 80px;
+    }
+  }
+
+  &__picture {
+    margin: 46px auto 0;
+    width: 992px;
+    height: 565px;
+    background: center / cover no-repeat url("./../img/install__img_surfaces.webp");
+
+    @include media(1200) {
+      width: 387px;
+      height: 995px;
+      background-image: url("./../img/install__img_surfaces-mob.webp");
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 82px;
+
+    @include media(900) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.install-item {
+  position: relative;
+  border-radius: 10px;
+  max-width: 310px;
+  box-shadow: 0 20px 37px 0 rgba(44, 55, 91, 0.15);
+  background: #fff;
+
+  &__img {
+    width: 310px;
+    height: 234px;
+    background: center / cover no-repeat;
+
+    &_1 {
+      background-image: url("./../img/install__img_item-1.webp");
+    }
+
+    &_2 {
+      background-image: url("./../img/install__img_item-2.webp");
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 15px 35px 25px;
+    font-weight: 600;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  &::before {
+    position: absolute;
+    left: -16px;
+    top: -16px;
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 56px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--mainColor);
+  }
+
+  &_1 {
+    &::before {
+      content: '01';
+    }
+  }
+
+  &_2 {
+    &::before {
+      content: '02';
+    }
+  }
+}
+
+.install-screw {
+  display: flex;
+  margin: 37px auto 0;
+  max-width: 640px;
+  gap: 34px;
+
+  &__icon {
+    border-radius: 100%;
+    padding: 0 13px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 20px 37px 0 rgba(44, 55, 91, 0.15);
+    line-height: 133px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  &__svg {
+    width: 54px;
+    height: 58px;
+    fill: var(--iconColor);
+  }
+
+  &__p {
+    font-size: 20px;
+  }
+}

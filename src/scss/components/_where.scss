@@ -1,0 +1,61 @@
+@use "mixins"as *;
+
+.where {
+  padding: 73px 0 77px;
+  background: center / cover no-repeat url("./../img/where__bg.webp");
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 58px 83px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    gap: 80px;
+
+    &>* {
+      justify-self: center
+    }
+
+    @include media(1200) {
+      padding: 50px;
+      gap: 50px;
+    }
+
+    @include media(900) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(500) {
+      padding: 30px;
+      gap: 20px;
+    }
+  }
+}
+
+.where-item {
+  max-width: 123px;
+
+  &__icon {
+    border-radius: 100%;
+    width: 111px;
+    height: 111px;
+    box-shadow: 0 20px 37px 0 rgba(44, 55, 91, 0.15);
+    line-height: 150px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  &__svg {
+    width: 53px;
+    height: 53px;
+    fill: var(--iconColor);
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+  }
+}
